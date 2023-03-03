@@ -1,0 +1,22 @@
+.codetext{
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d900;
+  height: 100%;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 auto;
+  width: 30%;
+  margin-top: 2rem;
+  box-shadow: 0 0 50px rgba(7, 7, 7, 0.361);
+  transition:  0.5s ease-in-out;
+  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  z-index: 1;
+  color: black;
+}
