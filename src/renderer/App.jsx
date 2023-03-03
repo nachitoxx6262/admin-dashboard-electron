@@ -1,4 +1,5 @@
-import { useRoutes } from 'react-router-dom';
+
+import { Routes, Route, Link } from 'react-router-dom';
 import Clients from '../components/Clientes/Clients';
 import RegisterFamily from '../components/Registrar/RegisterFamily';
 import RegisterFactory from '../components/Registrar/RegisterFactory';
@@ -7,17 +8,21 @@ import NaDni from '../components/Registrar/NaDni';
 
 import './App.css';
 
-const routes = [
-  { path: '/client', element: <Clients /> },
-  { path: '/clientfamily', element: <RegisterFamily /> },
-  { path: '/registercompany', element: <RegisterFactory /> },
-  { path: '/', element: <FormsFirebase /> },
-  { path: '/client/sindni', element: <NaDni /> },
-];
 function App() {
-  const element = useRoutes(routes);
-
-  return element;
+  return (
+    <div>
+      <Link to="/">
+        <h1>Bienvenido</h1>
+      </Link>
+      <Routes>
+        <Route path="/" element={<FormsFirebase />} />
+        <Route path="/client" element={<Clients />} />
+        <Route path="/clientfamily" element={<RegisterFamily />} />
+        <Route path="/registercompany" element={<RegisterFactory />} />
+        <Route path="/client/sindni" element={<NaDni />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
